@@ -1,14 +1,19 @@
-
+import FeatureSection from "./MainLayout/FeatureSection";
+import HeroSection from "./MainLayout/Hero/Hero";
+import NavbarPage from "./MainLayout/Navber";
+import NextFeaturesSection from "./MainLayout/NextFeaturesSection";
+import TechnicalUSP from "./MainLayout/TechnicalUSP";
 
 function App() {
-
   return (
     <>
-      
-      <h1>this is one tabe application
-      </h1>
+      <NavbarPage />
+      <HeroSection />
+      <FeatureSection/>
+      <NextFeaturesSection/>
+      <TechnicalUSP/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
