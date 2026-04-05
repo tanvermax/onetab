@@ -80,7 +80,7 @@ const TechnicalUSP: React.FC = () => {
 };
 
 // Reusable USP Component
-const USPItem = ({ index, icon, badge, title, description, points, color }: any) => (
+const USPItem = ({  icon, badge, title, description, points, color }: any) => (
   <div className="bg-[#0d1011] rounded-3xl p-8 border border-gray-800 flex flex-col h-full hover:bg-[#262626] transition-all">
     {/* <span className="text-xs font-mono  text-gray-600 mb-6 tracking-[0.2em]">USP — {index}</span> */}
     
