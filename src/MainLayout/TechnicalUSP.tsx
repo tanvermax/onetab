@@ -3,7 +3,7 @@ import { Users, Monitor, Globe2, CheckCircle, Dot } from "lucide-react";
 
 const TechnicalUSP: React.FC = () => {
   return (
-    <section className=" t py-24 px-6 md:px-12 lg:px-24 font-sans">
+    <section className=" max-w-7xl mx-auto py-24 px-6 md:px-12 lg:px-0 font-sans">
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-[#59a285] font-bold tracking-widest text-sm uppercase mb-4">TECHNICAL USP</p>
