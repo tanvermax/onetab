@@ -5,7 +5,7 @@ import tarq from "../../assets/tareqrahman.jpg";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="bg-white min-h-screen flex flex-col items-center justify-center py-12 px-6 lg:px-12 font-sans overflow-hidden">
+    <section className=" min-h-screen flex flex-col items-center justify-center py-12 px-6 lg:px-12 font-sans overflow-hidden">
       
       {/* Main Grid Container */}
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">

@@ -86,7 +86,7 @@ const FeatureSection: React.FC = () => {
             {/* Feature Points */}
             <ul className="space-y-4">
               {feature.points.map((point, idx) => (
-                <li key={idx} className="flex text-white items-start gap-3 text-gray-400 group-hover:text-gray-200 transition-colors">
+                <li key={idx} className="flex text-white items-start gap-3  group-hover:text-gray-200 transition-colors">
                   <CheckCircle2 className="w-5 h-5 text-[#59a285] shrink-0 mt-0.5" />
                   <span className="text-sm md:text-base">{point}</span>
                 </li>
