@@ -1,83 +1,169 @@
-import  { useState } from "react";
-import { Button } from "./button";
-import { ModeToggle } from "./ModeToggle";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import {
+  ChevronDown,
+  Tablet,
+ 
+  Menu,
+  X,
+  
+} from "lucide-react";
+import { Link } from "react-router";
+import { navLinks } from "./Navinks";
+import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Products", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Contacts", href: "#" },
-];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeMobileMenu, setActiveMobileMenu] = useState<string | null>(null);
+
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setActiveMobileMenu(null);
+  };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-slate-200 dark:border-slate-800">
-      <div className=" mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        
-        {/* LOGO SECTION */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="h-9 w-9 rounded-xl bg-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-200 dark:shadow-none group-hover:rotate-6 transition-transform">
-             <div className="h-4 w-4 bg-white rounded-sm" />
-          </div>
-          <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-            NoteArch
-          </span>
-        </a>
+ <header className="sticky top-0 z-50 w-full px-4 py-4">
+      {/* ২. মেইন কন্টেইনারে হালকা এন্ট্রান্স অ্যানিমেশন */}
+      <motion.div 
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#0f2a1a] px-6 py-4 shadow-2xl border border-white/5"
+      >
+        {/* LOGO */}
+        <Link to="/" onClick={closeMenu} className="flex items-center gap-2 group">
+          <motion.div 
+            whileHover={{ rotate: 10, scale: 1.1 }} // লোগো হোভার অ্যানিমেশন
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg"
+          >
+            <Tablet size={22} />
+          </motion.div>
+          <span className="text-2xl font-bold tracking-tight text-white">OneTab</span>
+        </Link>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden flex-1 items-center justify-center gap-10 md:flex">
+        <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-semibold text-slate-600 dark:text-slate-400 transition-colors hover:text-emerald-600 dark:hover:text-emerald-400"
-            >
-              {link.name}
-            </a>
+            <div key={link.name} className="group relative px-4 py-2">
+              <button className="flex items-center gap-1.5 text-sm font-semibold text-gray-300 transition-colors hover:text-white">
+                {link.name}
+                <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+              </button>
+
+              {/* ৩. ডেস্কটপ মেগা মেনু অ্যানিমেশন */}
+              <AnimatePresence>
+                <motion.div 
+                  initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className="invisible absolute left-1/2 top-full w-[500px] -translate-x-1/2 pt-6 opacity-0 group-hover:visible group-hover:opacity-100"
+                >
+                  <div className="grid grid-cols-2 gap-2 rounded-[2rem] bg-white p-6 shadow-2xl ring-1 ring-black/5">
+                    {link.nestednav.map((item) => (
+                      <motion.a
+                        key={item.name}
+                        href={item.href}
+                        whileHover={{ x: 5, backgroundColor: "rgba(16, 185, 129, 0.05)" }} // স্লাইড হোভার
+                        className="flex items-start gap-4 rounded-2xl p-4 transition-all"
+                      >
+                        <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${item.iconBg}`}>
+                          {item.icon}
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-slate-900">{item.name}</h4>
+                          <p className="mt-0.5 text-[11px] text-slate-500 line-clamp-2">{item.desc}</p>
+                        </div>
+                      </motion.a>
+                    ))}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           ))}
         </nav>
 
-        {/* ACTIONS */}
-        <div className="flex items-center gap-2 sm:gap-4">
-          <ModeToggle />
-          
-          <Button className="hidden md:flex bg-emerald-600 hover:bg-emerald-700 text-white rounded-full px-6 font-bold shadow-md">
-            Start Free
-          </Button>
-
-          {/* MOBILE MENU TOGGLE */}
-          <button 
-            className="md:hidden p-2 text-slate-600 dark:text-slate-300"
-            onClick={() => setIsOpen(!isOpen)}
+        {/* RIGHT ACTIONS */}
+        <div className="hidden items-center gap-4 lg:flex">
+          {/* <Link to="https://notearch.com/login" target="_blank">
+            <button className="text-sm font-bold text-white hover:text-emerald-400 transition-colors">Login</button>
+          </Link> */}
+         <Link to={"https://notearch.com/login"}> <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="rounded-xl bg-emerald-500 px-6 py-2.5 text-sm font-bold text-[#0f2a1a] shadow-lg"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+           Login
+          </motion.button></Link>
         </div>
-      </div>
 
-      {/* MOBILE OVERLAY MENU */}
-      {isOpen && (
-        <div className="fixed inset-0 top-[73px] z-40 bg-white dark:bg-slate-950 md:hidden animate-in slide-in-from-right duration-300">
-           <nav className="flex bg-white flex-col p-6 gap-6">
+        {/* MOBILE TOGGLE */}
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden text-white">
+          <motion.div animate={{ rotate: isMenuOpen ? 90 : 0 }}>
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </motion.div>
+        </button>
+      </motion.div>
+
+      {/* ৪. মোবাইল মেনু স্লাইড অ্যানিমেশন */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="fixed inset-x-4 top-24 z-40 overflow-hidden rounded-[2.5rem] bg-[#0f2a1a]/95 backdrop-blur-xl border border-white/10 p-8 text-white shadow-2xl lg:hidden"
+          >
+            <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-2xl  font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-4"
-                >
-                  {link.name}
-                </a>
+                <div key={link.name} className="border-b border-white/5">
+                  <button
+                    onClick={() => setActiveMobileMenu(activeMobileMenu === link.name ? null : link.name)}
+                    className="flex w-full items-center justify-between py-4 text-xl font-bold"
+                  >
+                    {link.name}
+                    <motion.div animate={{ rotate: activeMobileMenu === link.name ? 180 : 0 }}>
+                      <ChevronDown size={20} />
+                    </motion.div>
+                  </button>
+
+                  <AnimatePresence>
+                    {activeMobileMenu === link.name && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="grid gap-3 overflow-hidden"
+                      >
+                        {link.nestednav.map((item) => (
+                          <motion.a
+                            key={item.name}
+                            href={item.href}
+                            onClick={closeMenu}
+                            initial={{ x: -20 }}
+                            animate={{ x: 0 }}
+                            className="flex items-center gap-4 rounded-2xl bg-white/5 p-4"
+                          >
+                            <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${item.iconBg}`}>
+                              {item.icon}
+                            </div>
+                            <span className="text-sm font-medium">{item.name}</span>
+                          </motion.a>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
-              <Button className="w-full bg-emerald-600 py-8 text-xl font-bold rounded-2xl mt-4">
-                Start Free Trial <ArrowRight className="ml-2" />
-              </Button>
-           </nav>
-        </div>
-      )}
+              
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col gap-4">
+                 <Link to={"https://notearch.com/login"} className="w-full
+                  rounded-2xl border border-white/10 py-4 font-bold">Login</Link>
+              </motion.div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

@@ -8,10 +8,10 @@ import {
   Search, 
   CloudDownload 
 } from "lucide-react";
-import { Button } from "../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import Lottie from "lottie-react";
 // OneBook এর জন্য একটি লাইব্রেরি বা রিডিং অ্যানিমেশন ব্যবহার করুন
-import bookAnimation from "../../assets/teacher.json"; 
+import bookAnimation from "../../../assets/STUDENT.json"; 
 
 export default function OneBookSection() {
   // Lottie interoperability fix
@@ -93,17 +93,12 @@ export default function OneBookSection() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
+          {/* <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
             <Button className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-6 rounded-xl font-bold text-lg flex gap-3 shadow-lg shadow-violet-100">
               Access OneBook <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button
-              variant="outline"
-              className="text-slate-600 border-slate-200 hover:bg-slate-50"
-            >
-              <Info className="mr-2 h-4 w-4" /> User Manual
-            </Button>
-          </div>
+           
+          </div> */}
         </div>
 
         {/* --- RIGHT SIDE: LOTTIE ANIMATION --- */}

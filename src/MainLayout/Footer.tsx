@@ -1,5 +1,9 @@
 import { Badge } from "../components/ui/badge";
 import {  Mail } from "lucide-react";
+import { BsFacebook, BsTwitterX } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
+import { PiYoutubeLogoLight } from "react-icons/pi";
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,10 +27,10 @@ export default function Footer() {
               শিক্ষাদান ডিজিটাল করার সম্পূর্ণ সমাধান। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহার শিক্ষাব্যবস্থায় বৈপ্লবিক পরিবর্তন আনতে পারে।
             </p>
             <div className="flex gap-4">
-              <SocialIcon icon={<Mail size={18} />} href="#" />
-              <SocialIcon icon={<Mail size={18} />} href="#" />
-              <SocialIcon icon={<Mail size={18} />} href="#" />
-              <SocialIcon icon={<Mail size={18} />} href="#" />
+              <SocialIcon icon={<BsFacebook size={18} />} href="#" />
+              <SocialIcon icon={<BsTwitterX size={18} />} href="#" />
+              <SocialIcon icon={<FaLinkedin size={18} />} href="#" />
+              <SocialIcon icon={<PiYoutubeLogoLight size={18} />} href="#" />
             </div>
           </div>
 

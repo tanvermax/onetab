@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from "lucide-react";
-import { Button } from '../../components/ui/button';
-import tarq from "../../assets/tareqrahman.jpg";
+import tarq from "../../../assets/tareqrahman.jpg";
+import { Button } from '../../../components/ui/button';
 
 const HeroSection: React.FC = () => {
   return (

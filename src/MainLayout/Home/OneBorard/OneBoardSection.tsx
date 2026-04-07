@@ -8,10 +8,10 @@ import {
   MousePointer2, 
   PenTool 
 } from "lucide-react";
-import { Button } from "../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import Lottie from "lottie-react";
 // OneBoard এর জন্য একটি প্রাসঙ্গিক লটি ফাইল ব্যবহার করুন (যেমন: whiteboard or presentation animation)
-import boardAnimation from "../../assets/teacher.json"; 
+import boardAnimation from "../../../assets/TeacherPythagoras.json"; 
 
 export default function OneBoardSection() {
   // Lottie ইমপোর্ট এরর হ্যান্ডেল করার জন্য সেফটি চেক
@@ -26,12 +26,12 @@ export default function OneBoardSection() {
         <div className="absolute -bottom-16 -left-16 h-64 w-64 bg-blue-50/50 rounded-full border border-blue-100/50" />
 
         {/* --- LEFT SIDE: LOTTIE ANIMATION --- */}
-        <div className="order-2 lg:order-1 relative z-10">
+        <div className="relative z-10">
           <div className="bg-slate-50/50 rounded-3xl p-4 border border-slate-100 shadow-inner">
             <LottieComponent 
               animationData={boardAnimation} 
               loop={true} 
-              className="w-full h-auto max-w-125 mx-auto"
+              className="w-full h-auto  mx-auto"
             />
           </div>
         </div>
@@ -104,17 +104,12 @@ export default function OneBoardSection() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
+          {/* <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-lg flex gap-3 shadow-lg shadow-blue-100">
               Launch OneBoard <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button
-              variant="outline"
-              className="text-slate-600 border-slate-200 hover:bg-slate-50"
-            >
-              <Info className="mr-2 h-4 w-4" /> Feature Details
-            </Button>
-          </div>
+           
+          </div> */}
         </div>
       </div>
     </div>

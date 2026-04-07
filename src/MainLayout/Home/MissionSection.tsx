@@ -1,11 +1,11 @@
 import { Quote } from "lucide-react";
 
-import tareqr from "../assets/video/tareqrahman.mp4";
+import tareqr from "../../assets/video/tareqrahman.mp4";
 
 console.log(tareqr);
 export default function MissionSection() {
   return (
-    <div className="bg-[#1a1c1e] text-white p-8  md:p-16  md:rounded-[150px] rounded-2xl  shadow-lg shadow-[rgb(89,162,133)]  mx-auto overflow-hidden">
+    <div className="bg-[#1a1c1e] text-white p-8  md:p-16  md:rounded-[150px] rounded-2xl   mx-auto overflow-hidden">
       {/* Top Header */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 space-y-2">
@@ -20,12 +20,12 @@ export default function MissionSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Video Placeholder */}
-          <div className="relative aspect-video bg-slate-800 rounded-3xl border border-slate-700 flex items-center justify-center overflow-hidden group cursor-pointer shadow-2xl">
+          <div className="relative left-1/4 aspect-video bg-slate-800 rounded-full w-100 h-100 border border-slate-700 flex items-center justify-center overflow-hidden group cursor-pointer shadow-2xl">
             {/* You can replace this with an <iframe> or <video> tag */}
             <div className=" ">
-              <div className="relative aspect-video bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-slate-700">
+              <div className="relative w-100 h-100 aspect-video bg-slate-800 rounded-full overflow-hidden shadow-2xl border border-slate-700">
                 <video
-                  className="w-full h-full object-cover relative z-20" // z-index নিশ্চিত করে যে এটি উপরে আছে
+                  className="w-100 h-100 object-cover relative z-20" // z-index নিশ্চিত করে যে এটি উপরে আছে
                   controls
                   autoPlay
                   muted

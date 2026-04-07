@@ -1,7 +1,7 @@
 import { CheckCircle, ArrowRight, Info, Tablet } from "lucide-react";
-import { Button } from "../../components/ui/button";
+import { Button } from "../../../components/ui/button";
 import LottieRaw from "lottie-react";
-import teachingAnimation from "../../assets/teacher.json";
+import teachingAnimation from "../../../assets/teacher.json";
 
 // Lottie Interoperability Fix
 const Lottie = (LottieRaw as any).default || LottieRaw;
@@ -78,17 +78,12 @@ export default function TeachingScene() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
+          {/* <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
             <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-lg flex gap-3 shadow-lg">
               Manage OneTab Solution <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button
-              variant="outline"
-              className="text-slate-600 border-slate-200 hover:bg-slate-50"
-            >
-              <Info className="mr-2 h-4 w-4" /> Learn More
-            </Button>
-          </div>
+           
+          </div> */}
         </div>
 
         {/* --- RIGHT SIDE: LOTTIE ANIMATION --- */}
