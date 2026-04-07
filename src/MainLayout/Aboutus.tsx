@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Target, Lightbulb, Users2, Rocket } from "lucide-react";
 
 const stats = [
-  { label: "NPT Targets", value: "9-13", icon: <Target className="text-emerald-500" /> },
+  { label: "NPT Targets", value: "9-13", icon: <Target className="text-[#0098FD]" /> },
   { label: "SDG Goal", value: "04", icon: <Lightbulb className="text-blue-500" /> },
   { label: "Vision", value: "100%", icon: <Rocket className="text-purple-500" /> },
   { label: "Experts", value: "Global", icon: <Users2 className="text-orange-500" /> },
@@ -18,7 +18,7 @@ export default function AboutSection() {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-emerald-600 font-bold tracking-widest uppercase text-sm"
+            className="text-[#0098FD] font-bold tracking-widest uppercase text-sm"
           >
             আমাদের সম্পর্কে
           </motion.span>
@@ -28,7 +28,7 @@ export default function AboutSection() {
             transition={{ delay: 0.1 }}
             className="mt-3 text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight"
           >
-            ভবিষ্যতের দক্ষ জনবল গড়তে <span className="text-emerald-600">ডিজিটাল শিক্ষা</span> বিপ্লব
+            ভবিষ্যতের দক্ষ জনবল গড়তে <span className="text-[#0098FD]">ডিজিটাল শিক্ষা</span> বিপ্লব
           </motion.h2>
         </div>
 
@@ -74,7 +74,7 @@ export default function AboutSection() {
                 alt="Digital Education" 
                 className="w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-emerald-600/10 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[#0098FD]/10 mix-blend-multiply" />
             </div>
 
             {/* Floating Card */}
@@ -84,7 +84,7 @@ export default function AboutSection() {
               className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl max-w-[200px] border border-emerald-100 dark:border-emerald-900"
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="h-3 w-3 rounded-full bg-emerald-500 animate-pulse" />
+                <div className="h-3 w-3 rounded-full bg-[#0098FD] animate-pulse" />
                 <span className="text-xs font-bold text-slate-500">Live Mission</span>
               </div>
               <p className="text-sm font-bold text-slate-900 dark:text-white leading-tight">

@@ -1,14 +1,14 @@
 
 import { 
-  Info, 
+
   CheckCircle, 
-  ArrowRight, 
+
   BookOpen, 
   Library, 
   Search, 
   CloudDownload 
 } from "lucide-react";
-import { Button } from "../../../components/ui/button";
+
 import Lottie from "lottie-react";
 // OneBook এর জন্য একটি লাইব্রেরি বা রিডিং অ্যানিমেশন ব্যবহার করুন
 import bookAnimation from "../../../assets/STUDENT.json"; 

@@ -60,9 +60,9 @@ const TABS: Tab[] = [
     icon: GraduationCap,
     color: {
       badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      icon: "bg-emerald-50 text-emerald-600",
-      accent: "text-emerald-600",
-      dot: "bg-emerald-500",
+      icon: "bg-emerald-50 text-[#0098FD]",
+      accent: "text-[#0098FD]",
+      dot: "bg-[#0098FD]",
     },
     headline: "আধুনিক শিক্ষকের সম্পূর্ণ ডিজিটাল কর্মক্ষেত্র",
     sub: "লেকচার তৈরি থেকে রিপোর্ট প্রদান — সব একটি ট্যাবেই। ভয়েস কমান্ডে কাজ করুন, সময় বাঁচান।",
@@ -218,12 +218,12 @@ export default function NextFeaturesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="mb-2 text-lg font-semibold uppercase tracking-widest text-emerald-600">
+            <p className="mb-2 text-lg font-semibold uppercase tracking-widest text-[#0098FD]">
               প্ল্যাটফর্ম ফিচারসমূহ
             </p>
             <h2 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-4xl">
               সবার জন্য আলাদা,{" "}
-              <span className="text-emerald-600">সবার জন্য উপযুক্ত।</span>
+              <span className="text-[#0098FD]">সবার জন্য উপযুক্ত।</span>
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
               শিক্ষক, শিক্ষার্থী, প্রতিষ্ঠান পরিচালক ও অভিভাবক — প্রত্যেকের জন্য
@@ -263,7 +263,7 @@ export default function NextFeaturesSection() {
                 {isActive && (
                   <motion.span
                     layoutId="active-tab-dot"
-                    className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-[#0098FD]"
                   />
                 )}
               </button>

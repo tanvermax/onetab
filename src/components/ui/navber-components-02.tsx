@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router";
 import { navLinks } from "./Navinks";
 import { motion, AnimatePresence } from "framer-motion";
-
+import notearch from "../../assets/logonotearch.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,24 +28,25 @@ const Navbar = () => {
       <motion.div 
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#0f2a1a] px-6 py-4 shadow-2xl border border-white/5"
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#ffffff] px-6 py-4 shadow-2xl border border-white/5"
       >
         {/* LOGO */}
         <Link to="/" onClick={closeMenu} className="flex items-center gap-2 group">
           <motion.div 
             whileHover={{ rotate: 10, scale: 1.1 }} // লোগো হোভার অ্যানিমেশন
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg"
+            className=""
           >
-            <Tablet size={22} />
+                  
+
           </motion.div>
-          <span className="text-2xl font-bold tracking-tight text-white">OneTab</span>
+          <img className="w-30" src={notearch} alt="" />
         </Link>
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
             <div key={link.name} className="group relative px-4 py-2">
-              <button className="flex items-center gap-1.5 text-sm font-semibold text-gray-300 transition-colors hover:text-white">
+              <button className="flex items-center gap-1.5 text-sm font-semibold transition-colors hover:text-white">
                 {link.name}
                 <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
               </button>
@@ -85,12 +86,12 @@ const Navbar = () => {
         {/* RIGHT ACTIONS */}
         <div className="hidden items-center gap-4 lg:flex">
           {/* <Link to="https://notearch.com/login" target="_blank">
-            <button className="text-sm font-bold text-white hover:text-emerald-400 transition-colors">Login</button>
+            <button className="text-sm font-bold text-white hover:text-[#0098FD] transition-colors">Login</button>
           </Link> */}
          <Link to={"https://notearch.com/login"}> <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="rounded-xl bg-emerald-500 px-6 py-2.5 text-sm font-bold text-[#0f2a1a] shadow-lg"
+            className="rounded-xl bg-[#0098FD] px-6 py-2.5 text-sm font-bold text-[#0f2a1a] shadow-lg"
           >
            Login
           </motion.button></Link>

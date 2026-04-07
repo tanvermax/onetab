@@ -1,5 +1,5 @@
-import { CheckCircle, ArrowRight, Info, Tablet } from "lucide-react";
-import { Button } from "../../../components/ui/button";
+import { CheckCircle, Tablet } from "lucide-react";
+
 import LottieRaw from "lottie-react";
 import teachingAnimation from "../../../assets/teacher.json";
 
@@ -19,7 +19,7 @@ export default function TeachingScene() {
         <div className="space-y-10 relative z-10">
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              <div className="h-16 w-16 rounded-2xl bg-white border border-slate-100 flex items-center justify-center p-3 shadow-md shrink-0 text-emerald-600">
+              <div className="h-16 w-16 rounded-2xl bg-white border border-slate-100 flex items-center justify-center p-3 shadow-md shrink-0 text-[#0098FD]">
                 {/* Smartphone/Tablet Icon */}
                 <Tablet size={32} strokeWidth={1.5} />
               </div>
@@ -32,7 +32,7 @@ export default function TeachingScene() {
                 </Badge>
                 <h2 className="text-4xl font-bold text-slate-900 tracking-tight leading-tight">
                   শিক্ষাদান ডিজিটাল করার <br />
-                  <span className="text-emerald-600">সম্পূর্ণ সমাধান</span>
+                  <span className="text-[#0098FD]">সম্পূর্ণ সমাধান</span>
                 </h2>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function TeachingScene() {
 
           <div className="space-y-6">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-emerald-500" /> Key OneTab Features
+              <CheckCircle className="h-4 w-4 text-[#0098FD]" /> Key OneTab Features
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               {[
@@ -66,7 +66,7 @@ export default function TeachingScene() {
                 },
               ].map((item, index) => (
                 <div key={index} className="flex gap-3 group">
-                  <div className="mt-1 shrink-0 h-4 w-4 rounded-full border-2 border-emerald-300 group-hover:bg-emerald-500 transition-colors" />
+                  <div className="mt-1 shrink-0 h-4 w-4 rounded-full border-2 border-emerald-300 group-hover:bg-[#0098FD] transition-colors" />
                   <div>
                     <p className="font-semibold text-slate-900 leading-tight">
                       {item.title}

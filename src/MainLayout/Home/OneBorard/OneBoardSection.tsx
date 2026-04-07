@@ -1,14 +1,14 @@
 
 import { 
-  Info, 
+   
   CheckCircle, 
-  ArrowRight, 
+
   Presentation, 
   Layout, 
   MousePointer2, 
   PenTool 
 } from "lucide-react";
-import { Button } from "../../../components/ui/button";
+
 import Lottie from "lottie-react";
 // OneBoard এর জন্য একটি প্রাসঙ্গিক লটি ফাইল ব্যবহার করুন (যেমন: whiteboard or presentation animation)
 import boardAnimation from "../../../assets/TeacherPythagoras.json"; 

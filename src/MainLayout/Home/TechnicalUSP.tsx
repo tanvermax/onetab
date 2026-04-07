@@ -6,9 +6,9 @@ const TechnicalUSP: React.FC = () => {
     <section className=" max-w-7xl mx-auto py-24 px-6 md:px-12 lg:px-0 font-sans">
       {/* Header */}
       <div className="text-center mb-16">
-        <p className="text-[#59a285] font-bold tracking-widest text-sm uppercase mb-4">TECHNICAL USP</p>
+        <p className="text-[#0098FD] font-bold tracking-widest text-sm uppercase mb-4">TECHNICAL USP</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          কেন OneTab <span className="text-[#59a285]">আলাদা?</span>
+          কেন OneTab <span className="text-[#0098FD]">আলাদা?</span>
         </h2>
         <p className="text-gray-400 text-lg">তিনটি প্রযুক্তিগত সুবিধা যা বাংলাদেশের অন্য কোনো শিক্ষা প্ল্যাটফর্মে নেই।</p>
       </div>
@@ -19,7 +19,7 @@ const TechnicalUSP: React.FC = () => {
         {/* Card 01 - Unified Ecosystem */}
         <USPItem 
           index="01"
-          icon={<Users className="w-8 h-8 text-[#59a285]" />}
+          icon={<Users className="w-8 h-8 text-[#0098FD]" />}
           badge="UNIFIED ECOSYSTEM"
           title="শিক্ষার সকল পক্ষ একটি প্ল্যাটফর্মে"
           description="শিক্ষক, অভিভাবক, লাইব্রেরি ও প্রকাশক — সবাই একই সংযুক্ত নেটওয়ার্কে কাজ করেন।"
@@ -29,7 +29,7 @@ const TechnicalUSP: React.FC = () => {
             "কোচিং ও প্রাইভেট টিউটর একই নেটওয়ার্কে যুক্ত",
             "ডিজিটাল কনটেন্ট ক্রিয়েটরদের মার্কেটপ্লেস"
           ]}
-          color="#59a285"
+          color="#0098FD"
         />
 
         {/* Card 02 - Hybrid Learning */}
@@ -66,12 +66,12 @@ const TechnicalUSP: React.FC = () => {
       </div>
 
       {/* Bottom CTA Bar */}
-      <div className="max-w-5xl mx-auto text-white bg-black border border-gray-800 rounded-2xl p-6 md:p-8 flex items-center gap-6 group hover:border-[#59a285] transition-all">
+      <div className="max-w-5xl mx-auto text-white bg-black border border-gray-800 rounded-2xl p-6 md:p-8 flex items-center gap-6 group hover:border-[#0098FD] transition-all">
         <div className="bg-[#d1e7dd] p-3 rounded-xl">
           <CheckCircle className="w-8 h-8 text-[#0f5132]" />
         </div>
         <div>
-          <h4 className="lg:text-xl  md:text-2xl font-bold mb-1 group-hover:text-[#59a285] transition-colors">সম্পূর্ণ বিনামূল্যে অ্যাপ ডাউনলোড করুন</h4>
+          <h4 className="lg:text-xl  md:text-2xl font-bold mb-1 group-hover:text-[#0098FD] transition-colors">সম্পূর্ণ বিনামূল্যে অ্যাপ ডাউনলোড করুন</h4>
           <p className=" text-xs">শিক্ষাপ্রতিষ্ঠান, শিক্ষক, শিক্ষার্থী ও অভিভাবক — সবাই নিজের স্মার্টফোনে বিনামূল্যে ব্যবহার করতে পারবেন।</p>
         </div>
       </div>

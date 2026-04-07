@@ -3,7 +3,7 @@ import {  Mail } from "lucide-react";
 import { BsFacebook, BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { PiYoutubeLogoLight } from "react-icons/pi";
-
+import notearch from "../assets/logonotearch.png"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,12 +16,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-emerald-600 flex items-center justify-center shadow-md">
-                <div className="h-3 w-3 bg-white rounded-sm" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-                NoteArch
-              </span>
+              <img className="w-30" src={notearch} alt="" />
             </div>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
               শিক্ষাদান ডিজিটাল করার সম্পূর্ণ সমাধান। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহার শিক্ষাব্যবস্থায় বৈপ্লবিক পরিবর্তন আনতে পারে।
@@ -61,7 +56,7 @@ export default function Footer() {
             <div className="space-y-6">
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Compliance</h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline" className="text-emerald-600 dark:text-emerald-500 border-emerald-100 dark:border-emerald-900/50 bg-emerald-50 dark:bg-emerald-900/10 px-3 py-1 rounded-full text-[10px] font-bold">
+                <Badge variant="outline" className="text-[#0098FD] dark:text-[#0098FD] border-emerald-100 dark:border-emerald-900/50 bg-emerald-50 dark:bg-emerald-900/10 px-3 py-1 rounded-full text-[10px] font-bold">
                   SDG Goal 4
                 </Badge>
                 <Badge variant="outline" className="text-blue-600 border-blue-100 bg-blue-50 dark:bg-blue-900/10 dark:border-blue-900/50 px-3 py-1 rounded-full text-[10px] font-bold">
@@ -86,9 +81,9 @@ export default function Footer() {
             © {currentYear} NoteArch Education. সর্বস্বত্ব সংরক্ষিত।
           </p>
           <div className="flex gap-6 text-xs text-slate-400">
-             <a href="#" className="hover:text-emerald-500 transition-colors">Terms of Service</a>
-             <a href="#" className="hover:text-emerald-500 transition-colors">Privacy Policy</a>
-             <a href="#" className="hover:text-emerald-500 transition-colors">Cookies</a>
+             <a href="#" className="hover:text-[#0098FD] transition-colors">Terms of Service</a>
+             <a href="#" className="hover:text-[#0098FD] transition-colors">Privacy Policy</a>
+             <a href="#" className="hover:text-[#0098FD] transition-colors">Cookies</a>
           </div>
         </div>
       </div>
@@ -100,7 +95,7 @@ export default function Footer() {
 function FooterLink({ label }: { label: string }) {
   return (
     <li>
-      <a href="#" className="text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+      <a href="#" className="text-sm text-slate-500 dark:text-slate-400 hover:text-[#0098FD] dark:hover:text-[#0098FD] transition-colors">
         {label}
       </a>
     </li>
@@ -111,7 +106,7 @@ function SocialIcon({ icon, href }: { icon: React.ReactNode; href: string }) {
   return (
     <a 
       href={href} 
-      className="h-9 w-9 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-600 transition-all duration-300"
+      className="h-9 w-9 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#0098FD] hover:text-white hover:border-[#0098FD] transition-all duration-300"
     >
       {icon}
     </a>

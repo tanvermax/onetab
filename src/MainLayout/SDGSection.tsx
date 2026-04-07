@@ -7,7 +7,7 @@ const goals = [
     title: "সার্বজনীন প্রাথমিক ও মাধ্যমিক শিক্ষা সম্পন্ন",
     desc: "OneBook ও OneTab ব্যবহার করে ভার্চুয়াল ক্লাসরুমের মাধ্যমে ১০০% শিক্ষার্থীর উচ্চমাধ্যমিক বা সমমান পর্যন্ত শিক্ষার সফল সমাপ্তি নিশ্চিত করা।",
     num: "09",
-    icon: <CheckCircle2 className="w-6 h-6 text-emerald-500" />,
+    icon: <CheckCircle2 className="w-6 h-6 text-[#0098FD]" />,
   },
   {
     npt: "NPT — 10",
@@ -40,12 +40,12 @@ export default function SDGSection() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 px-4 py-1.5 rounded-full w-fit text-sm font-bold">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="flex items-center gap-2 mb-4 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-[#0098FD] px-4 py-1.5 rounded-full w-fit text-sm font-bold">
+              <div className="w-2 h-2 rounded-full bg-[#0098FD] animate-pulse" />
               SDG Goal 4 — Quality Education
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-              জাতীয় <span className="text-emerald-600 italic">অগ্রাধিকার লক্ষ্যমাত্রা</span>
+              জাতীয় <span className="text-[#0098FD] italic">অগ্রাধিকার লক্ষ্যমাত্রা</span>
             </h2>
           </div>
           <p className="text-slate-600 dark:text-slate-400 max-w-md text-lg leading-relaxed">
@@ -61,10 +61,10 @@ export default function SDGSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="relative group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-emerald-500/50 transition-all hover:shadow-2xl overflow-hidden"
+              className="relative group p-8 rounded-[2rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-[#0098FD]/50 transition-all hover:shadow-2xl overflow-hidden"
             >
               <div className="relative z-10">
-                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-4 block">
+                <span className="text-xs font-bold text-[#0098FD] dark:text-[#0098FD] mb-4 block">
                   {goal.npt}
                 </span>
                 <div className="mb-4">{goal.icon}</div>
@@ -75,7 +75,7 @@ export default function SDGSection() {
                   {goal.desc}
                 </p>
               </div>
-              <span className="absolute -bottom-4 -right-2 text-8xl font-black text-slate-100 dark:text-slate-800/50 pointer-events-none group-hover:text-emerald-500/10 transition-colors">
+              <span className="absolute -bottom-4 -right-2 text-8xl font-black text-slate-100 dark:text-slate-800/50 pointer-events-none group-hover:text-[#0098FD]/10 transition-colors">
                 {goal.num}
               </span>
             </motion.div>
@@ -89,12 +89,12 @@ export default function SDGSection() {
           className="relative rounded-[2.5rem] bg-[#0f2a1a] p-8 md:p-12 text-white overflow-hidden shadow-2xl"
         >
           {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#0098FD]/10 rounded-full blur-3xl -mr-32 -mt-32" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -ml-32 -mb-32" />
 
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block px-4 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold mb-6 border border-emerald-500/30">
+              <span className="inline-block px-4 py-1 rounded-full bg-[#0098FD]/20 text-emerald-300 text-xs font-bold mb-6 border border-[#0098FD]/30">
                 Strategic Vision
               </span>
               <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
@@ -112,7 +112,7 @@ export default function SDGSection() {
                 { num: "NPT 9–13", lbl: "সম্পূর্ণ বাস্তবায়নের প্রতিশ্রুতি" },
               ].map((stat, idx) => (
                 <div key={idx} className="flex flex-col items-center sm:items-start p-4 rounded-2xl bg-white/5 border border-white/10 text-center sm:text-left">
-                  <span className="text-3xl font-black text-emerald-400 mb-2">{stat.num}</span>
+                  <span className="text-3xl font-black text-[#0098FD] mb-2">{stat.num}</span>
                   <span className="text-[11px] uppercase tracking-wider text-emerald-100/60 font-bold leading-tight">
                     {stat.lbl}
                   </span>

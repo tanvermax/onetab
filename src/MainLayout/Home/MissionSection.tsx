@@ -9,12 +9,12 @@ export default function MissionSection() {
       {/* Top Header */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 space-y-2">
-          <p className="text-emerald-500 md:text-sm text-xs font-medium tracking-wide">
+          <p className="text-[#0098FD] md:text-sm text-xs font-medium tracking-wide">
             সরকারি উদ্যোগ • ONETAB-এর অনুপ্রেরণা
           </p>
           <h2 className="text-2xl md:text-4xl font-bold leading-tight">
             যে ভাবনা থেকে জন্ম নিয়েছে <br />
-            <span className="text-emerald-500">আমাদের প্ল্যাটফর্ম</span>
+            <span className="text-[#0098FD]">আমাদের প্ল্যাটফর্ম</span>
           </h2>
         </div>
 
@@ -44,11 +44,11 @@ export default function MissionSection() {
           <div className="space-y-8">
             {/* Quote Card */}
             <div className="relative bg-[#232629] p-8 rounded-3xl  shadow-xl">
-              <Quote className="text-emerald-500 mb-4 h-8 w-8 opacity-50" />
+              <Quote className="text-[#0098FD] mb-4 h-8 w-8 opacity-50" />
               <p className="md:text-lg text-sm leading-relaxed text-slate-200 mb-6 font-medium">
                 প্রতিটি শিক্ষকের হাতে একটি ট্যাব তুলে দিতে পারলে বাংলাদেশের
                 শিক্ষাব্যবস্থা আমূল বদলে যাবে।
-                <span className="text-emerald-400">
+                <span className="text-[#0098FD]">
                   {" "}
                   One Teacher, One Tab
                 </span>{" "}
@@ -56,7 +56,7 @@ export default function MissionSection() {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="md:h-12 md:w-12 h-10 w-10 rounded-full bg-emerald-600 flex items-center justify-center font-bold md:text-lg text-md">
+                <div className="md:h-12 md:w-12 h-10 w-10 rounded-full bg-[#0098FD] flex items-center justify-center font-bold md:text-lg text-md">
                   TR
                 </div>
                 <div>
@@ -71,15 +71,15 @@ export default function MissionSection() {
             {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-emerald-500">৫ লক্ষ+</p>
+                <p className="md:text-xl font-bold text-[#0098FD]">৫ লক্ষ+</p>
                 <p className="text-[10px] text-slate-400">প্রাথমিক বিদ্যালয়</p>
               </div>
               <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-emerald-500">৪০ লক্ষ+</p>
+                <p className="md:text-xl font-bold text-[#0098FD]">৪০ লক্ষ+</p>
                 <p className="text-[10px] text-slate-400">শিক্ষক</p>
               </div>
               <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-emerald-500 uppercase">
+                <p className="md:text-xl font-bold text-[#0098FD] uppercase">
                   Sdg
                 </p>
                 <p className="text-[10px] text-slate-400">Goal 4 • NPT 9—13</p>
@@ -118,7 +118,7 @@ export default function MissionSection() {
           </div> */}
 
             {/* Download Button */}
-            {/* <Button className="w-full bg-[#232629] hover:bg-emerald-600 text-white border border-slate-700 rounded-xl py-6 flex items-center justify-center gap-3 transition-all font-bold">
+            {/* <Button className="w-full bg-[#232629] hover:bg-[#0098FD] text-white border border-slate-700 rounded-xl py-6 flex items-center justify-center gap-3 transition-all font-bold">
             <Download className="h-5 w-5" />
             বিনামূল্যে OneTab ডাউনলোড করুন
           </Button> */}

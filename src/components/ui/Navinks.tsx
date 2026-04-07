@@ -21,7 +21,7 @@ export const navLinks = [
         name: "OneTab",
         href: "#onetab",
         desc: "শিক্ষক ও প্রতিষ্ঠানের ERP",
-        icon: <Tablet className="w-5 h-5 text-emerald-600" />,
+        icon: <Tablet className="w-5 h-5 text-[#0098FD]" />,
         iconBg: "bg-emerald-50",
       },
       {
@@ -48,7 +48,7 @@ export const navLinks = [
         name: "ব্যবহারকারী অনুযায়ী",
         desc: "পাঠ তৈরি, উপস্থিতি, রিপোর্ট",
         href: "#onetab",
-        icon: <Users className="w-5 h-5 text-emerald-600" />,
+        icon: <Users className="w-5 h-5 text-[#0098FD]" />,
         iconBg: "bg-emerald-50",
       },
       {
