@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   ChevronDown,
-  Tablet,
  
   Menu,
   X,
