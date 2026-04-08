@@ -19,21 +19,21 @@ export const navLinks = [
     nestednav: [
       {
         name: "OneTab",
-        href: "#onetab",
+        href: "/#onetab",
         desc: "শিক্ষক ও প্রতিষ্ঠানের ERP",
         icon: <Tablet className="w-5 h-5 text-[#0098FD]" />,
         iconBg: "bg-emerald-50",
       },
       {
         name: "OneBoard",
-        href: "#oneboard",
+        href: "/#oneboard",
         desc: "ডিজিটাল ডিসপ্লে বোর্ড",
         icon: <Monitor className="w-5 h-5 text-blue-600" />,
         iconBg: "bg-blue-50",
       },
       {
         name: "OneBook",
-        href: "#onebook",
+        href: "/#onebook",
         desc: "শিক্ষার্থী ও অভিভাবক ট্যাবলেট",
         icon: <BookOpen className="w-5 h-5 text-orange-600" />,
         iconBg: "bg-orange-50",
