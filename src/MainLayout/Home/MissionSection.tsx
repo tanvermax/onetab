@@ -1,68 +1,68 @@
 import { Quote } from "lucide-react";
+import tareqr from "../../assets/tareqvision.mp4";
 
-import tareqr from "../../assets/video/tareqrahman.mp4";
-
-console.log(tareqr);
 export default function MissionSection() {
   return (
-    <div className="bg-[#1a1c1e] text-white p-8  md:p-16  md:rounded-[150px] rounded-2xl   mx-auto overflow-hidden">
-      {/* Top Header */}
+    <div className="bg-[#1a1c1e] text-white p-6 md:p-16 md:rounded-[150px] rounded-[40px] mx-auto overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-12 space-y-2">
-          <p className="text-[#0098FD] md:text-sm text-xs font-medium tracking-wide">
+          <p className="text-[#0098FD] md:text-sm text-xs font-medium tracking-wide uppercase">
             সরকারি উদ্যোগ • ONETAB-এর অনুপ্রেরণা
           </p>
-          <h2 className="text-2xl md:text-4xl font-bold leading-tight">
-            যে ভাবনা থেকে জন্ম নিয়েছে <br />
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            যে ভাবনা থেকে জন্ম নিয়েছে <br />
             <span className="text-[#0098FD]">আমাদের প্ল্যাটফর্ম</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side: Video Placeholder */}
-          <div className="relative left-1/4 aspect-video bg-slate-800 rounded-full w-100 h-100 border border-slate-700 flex items-center justify-center overflow-hidden group cursor-pointer shadow-2xl">
-            {/* You can replace this with an <iframe> or <video> tag */}
-            <div className=" ">
-              <div className="relative w-100 h-100 aspect-video bg-slate-800 rounded-full overflow-hidden shadow-2xl border border-slate-700">
+          
+          {/* Left Side: Video Section (Responsive & Rounded) */}
+          <div className="flex justify-center items-center order-1">
+            <div className="relative w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[450px] aspect-square">
+              {/* Outer Decorative Ring */}
+              <div className="absolute -inset-4 border-2 border-dashed border-[#0098FD]/30 rounded-full animate-[spin_20s_linear_infinite]" />
+              
+              {/* Main Video Container */}
+              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-[#232629] shadow-[0_0_50px_rgba(0,152,253,0.2)]">
                 <video
-                  className="w-100 h-100 object-cover relative z-20" // z-index নিশ্চিত করে যে এটি উপরে আছে
-                  controls
+                  className="w-full h-full object-cover scale-110" // scale-110 ব্যবহার করা হয়েছে যাতে কিনারায় গ্যাপ না থাকে
                   autoPlay
-                  muted
+                 
                   loop
                   playsInline
+                  controls // প্রিমিয়াম লুকের জন্য কন্ট্রোল অফ রাখা ভালো, চাইলে true দিতে পারেন
                 >
                   <source src={tareqr} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                
+                {/* Overlay to match theme */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e]/40 to-transparent pointer-events-none" />
               </div>
             </div>
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
           </div>
 
           {/* Right Side: Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 order-2">
             {/* Quote Card */}
-            <div className="relative bg-[#232629] p-8 rounded-3xl  shadow-xl">
+            <div className="relative bg-[#232629] p-8 rounded-3xl shadow-xl border border-white/5">
               <Quote className="text-[#0098FD] mb-4 h-8 w-8 opacity-50" />
-              <p className="md:text-lg text-sm leading-relaxed text-slate-200 mb-6 font-medium">
-                প্রতিটি শিক্ষকের হাতে একটি ট্যাব তুলে দিতে পারলে বাংলাদেশের
-                শিক্ষাব্যবস্থা আমূল বদলে যাবে।
-                <span className="text-[#0098FD]">
-                  {" "}
-                  One Teacher, One Tab
-                </span>{" "}
-                — এটি শুধু একটি স্লোগান নয়, এটি আমাদের শিক্ষার ভবিষ্যৎ।
+              <p className="md:text-xl text-base leading-relaxed text-slate-200 mb-8 font-medium">
+                "প্রতিটি শিক্ষকের হাতে একটি ট্যাব তুলে দিতে পারলে বাংলাদেশের
+                শিক্ষাব্যবস্থা আমূল বদলে যাবে। 
+                <span className="text-[#0098FD]"> One Teacher, One Tab</span> — এটি শুধু একটি স্লোগান নয়, এটি আমাদের শিক্ষার ভবিষ্যৎ।"
               </p>
 
-              <div className="flex items-center gap-4">
-                <div className="md:h-12 md:w-12 h-10 w-10 rounded-full bg-[#0098FD] flex items-center justify-center font-bold md:text-lg text-md">
+              <div className="flex items-center gap-4 border-t border-white/10 pt-6">
+                <div className="h-14 w-14 rounded-full bg-gradient-to-br from-[#0098FD] to-[#0076c4] flex items-center justify-center font-bold text-xl shadow-lg">
                   TR
                 </div>
                 <div>
-                  <h4 className="font-bold md:text-base text-sm">তারেক রহমান</h4>
-                  <p className="md:text-xs text-[10px] text-slate-400">
-                    মাননীয় প্রধানমন্ত্রী, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার
+                  <h4 className="font-bold text-lg">তারেক রহমান</h4>
+                  <p className="text-xs text-slate-400 uppercase tracking-wider">
+                    মাননীয় প্রধানমন্ত্রী, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার
                   </p>
                 </div>
               </div>
@@ -70,59 +70,19 @@ export default function MissionSection() {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-[#0098FD]">৫ লক্ষ+</p>
-                <p className="text-[10px] text-slate-400">প্রাথমিক বিদ্যালয়</p>
-              </div>
-              <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-[#0098FD]">৪০ লক্ষ+</p>
-                <p className="text-[10px] text-slate-400">শিক্ষক</p>
-              </div>
-              <div className="bg-[#232629] p-4 rounded-2xl border border-slate-800 text-center">
-                <p className="md:text-xl font-bold text-[#0098FD] uppercase">
-                  Sdg
-                </p>
-                <p className="text-[10px] text-slate-400">Goal 4 • NPT 9—13</p>
-              </div>
+              {[
+                { label: "প্রাথমিক বিদ্যালয়", val: "৫ লক্ষ+" },
+                { label: "শিক্ষক", val: "৪০ লক্ষ+" },
+                { label: "SDG Goal 4", val: "NPT 9—13" }
+              ].map((stat, i) => (
+                <div key={i} className="bg-[#232629] p-4 rounded-2xl border border-white/5 text-center hover:bg-[#2a2e32] transition-colors">
+                  <p className="text-lg md:text-2xl font-black text-[#0098FD]">{stat.val}</p>
+                  <p className="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-tight">{stat.label}</p>
+                </div>
+              ))}
             </div>
-
-            {/* Tags */}
-            {/* <div className="flex flex-wrap gap-2">
-            <Badge className="bg-white text-slate-900 hover:bg-white px-4 py-1.5 rounded-full text-xs">
-              One Teacher One Tab
-            </Badge>
-            <Badge
-              variant="outline"
-              className="text-white border-slate-700 px-4 py-1.5 rounded-full text-xs hover:bg-white hover:text-black transition-colors cursor-pointer"
-            >
-              সরকারি অনুপ্রেরণা
-            </Badge>
-            <Badge
-              variant="outline"
-              className="text-white border-slate-700 px-4 py-1.5 rounded-full text-xs"
-            >
-              ডিজিটাল বাংলাদেশ
-            </Badge>
-            <Badge
-              variant="outline"
-              className="text-white border-slate-700 px-4 py-1.5 rounded-full text-xs"
-            >
-              আধুনিক শিক্ষা
-            </Badge>
-            <Badge
-              variant="outline"
-              className="text-white border-slate-700 px-4 py-1.5 rounded-full text-xs uppercase"
-            >
-              Npt 9—13
-            </Badge>
-          </div> */}
-
-            {/* Download Button */}
-            {/* <Button className="w-full bg-[#232629] hover:bg-[#0098FD] text-white border border-slate-700 rounded-xl py-6 flex items-center justify-center gap-3 transition-all font-bold">
-            <Download className="h-5 w-5" />
-            বিনামূল্যে OneTab ডাউনলোড করুন
-          </Button> */}
           </div>
+
         </div>
       </div>
     </div>

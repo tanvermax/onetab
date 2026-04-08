@@ -90,7 +90,7 @@ const Navbar = () => {
          <Link to={"https://notearch.com/login"}> <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="rounded-xl bg-[#0098FD] px-6 py-2.5 text-sm font-bold text-[#0f2a1a] shadow-lg"
+            className="rounded-xl bg-[#0098FD] px-6 py-2.5 text-sm font-semibold  text-white shadow-lg"
           >
            Login
           </motion.button></Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
               
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col gap-4">
                  <Link to={"https://notearch.com/login"} className="w-full
-                  rounded-2xl border border-white/10 py-4 text-center font-normal">Login</Link>
+                  rounded-2xl border border-white/10  py-4 text-center font-normal">Login</Link>
               </motion.div>
             </nav>
           </motion.div>

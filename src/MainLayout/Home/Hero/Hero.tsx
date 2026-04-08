@@ -34,26 +34,26 @@ const HeroSection: React.FC = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex  flex-wrap gap-4">
             <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-wrap gap-4"
+            className="grid grid-cols-2  gap-4"
           >
             {/* Play Store Button */}
             <a 
               href="https://play.google.com/store/apps/details?id=com.teknosoft.notearch.academy" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#0098FD] text-white px-6 py-3 rounded-2xl hover:bg-gray-900 transition-all shadow-xl hover:shadow-emerald-500/10 border border-white/10 group"
+              className="flex items-center gap-3 bg-[#0098FD] text-white px-6 py-3 rounded-2xl hover:shadow-2xl hover:shadow-[#0098FD] hover:bg-[#e2f3ff] transition-all shadow-xl  border border-white/10 group"
             >
               <div className="bg-white/10 p-2 rounded-lg group-hover:scale-110 transition-transform">
                 <FaGooglePlay size={24} fill="white" className="" />
               </div>
               <div className="flex flex-col items-start leading-none">
-                <span className="text-[10px] uppercase font-medium text-black">Get it on</span>
-                <span className="text-lg font-bold text-black">Google Play</span>
+                <span className="md:text-[10px] text-[8px] uppercase font-medium text-black">Get it on</span>
+                <span className="md:text-sm text-[12px] font-bold text-black">Google Play</span>
               </div>
             </a>
 
@@ -62,14 +62,14 @@ const HeroSection: React.FC = () => {
               href="https://apps.apple.com/gb/app/notearch/id6756450121" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#0098FD] text-white px-6 py-3 rounded-2xl hover:bg-gray-900 transition-all shadow-xl hover:shadow-blue-500/10 border border-white/10 group"
+              className="flex items-center gap-3 bg-[#0098FD] text-white px-6 py-3 rounded-2xl hover:shadow-2xl hover:shadow-[#0098FD] hover:bg-[#e2f3ff] transition-all shadow-xl  border border-white/10 group"
             >
               <div className="bg-white/10 p-2 rounded-lg group-hover:scale-110 transition-transform">
                 <FaApple size={24} fill="white" className="" />
               </div>
               <div className="flex flex-col items-start leading-none">
-                <span className="text-[10px] uppercase font-medium text-black">Download on the</span>
-                <span className="text-lg font-bold text-black">App Store</span>
+                <span className="md:text-[10px] text-[8px] uppercase font-medium text-black">Download on the</span>
+                <span className="md:text-sm text-[12px] font-bold text-black">App Store</span>
               </div>
             </a>
           </motion.div>
