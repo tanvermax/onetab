@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BookOpen, CalendarCheck, FileBarChart, LayoutPanelTop, PieChart, Users } from "lucide-react";
+import { Link } from "react-router";
 
 const userFeatures = [
   {
@@ -108,9 +109,9 @@ export default function UserSolutions() {
             <h4 className="text-2xl font-bold">আজই আপনার যাত্রা শুরু করুন</h4>
             <p className="text-emerald-100 opacity-80">ফ্রিতে অ্যাকাউন্ট তৈরি করে ডিজিটাল শিক্ষার নতুন অভিজ্ঞতা নিন।</p>
           </div>
-          <button className="bg-white text-[#0098FD] px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-emerald-50 transition-colors">
+          <Link to="https://notearch.com/login" className="bg-white text-[#0098FD] px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-emerald-50 transition-colors">
             অ্যাকাউন্ট তৈরি করুন
-          </button>
+          </Link>
         </motion.div>
 
       </div>

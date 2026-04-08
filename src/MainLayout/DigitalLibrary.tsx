@@ -39,13 +39,13 @@ export default function DigitalLibrary() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 px-4 py-2 rounded-full mb-6 font-bold text-xs uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/20 text-[#0098FD] px-4 py-2 rounded-full mb-6 font-bold text-xs uppercase tracking-widest">
               <Sparkles size={16} />
               OneBook Digital Resource Center
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-6">
               পকেটে রাখুন পুরো <br />
-              <span className="text-emerald-600">জ্ঞানের সমুদ্র।</span>
+              <span className="text-[#0098FD]">জ্ঞানের সমুদ্র।</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-10">
               ভারী বইয়ের ব্যাগ আর নয়! OneBook-এর ডিজিটাল লাইব্রেরিতে আপনি পাচ্ছেন অফলাইন রিডিং, স্মার্ট সার্চ এবং ইন্টারঅ্যাক্টিভ কন্টেন্ট যা আপনার শেখার অভিজ্ঞতাকে করবে আরও আনন্দদায়ক।
@@ -121,7 +121,7 @@ export default function DigitalLibrary() {
               className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-5 rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-800"
             >
               <div className="text-center">
-                <p className="text-2xl font-black text-emerald-600">৫০GB+</p>
+                <p className="text-2xl font-black text-[#0098FD]">৫০GB+</p>
                 <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">ফ্রি ক্লাউড স্টোরেজ</p>
               </div>
             </motion.div>
