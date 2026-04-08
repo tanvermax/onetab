@@ -38,15 +38,15 @@ export default function Footer() {
                   <FooterLink id="onetab" label="OneTab ERP" />
                   <FooterLink id="oneboard" label="OneBoard" />
                   <FooterLink id="onebook" label="OneBook" />
-                  <FooterLink id="smart-attendance" label="Smart Attendance" />
+                  {/* <FooterLink id="smart-attendance" label="Smart Attendance" /> */}
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Support</h3>
                 <ul className="mt-4 space-y-2">
-                  <FooterLink id="document" label="Documentation" />
+                  {/* <FooterLink id="document" label="Documentation" /> */}
                   <FooterLink id="guide" label="Guides" />
-                  <FooterLink id="apistatus" label="API Status" />
+                  {/* <FooterLink id="apistatus" label="API Status" /> */}
                   <FooterLink id="privacy" label="Privacy Policy" />
                 </ul>
               </div>
