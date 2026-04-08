@@ -1,7 +1,38 @@
+import { useEffect, useRef } from "react"; // useRef এবং useEffect লাগবে
 import { Quote } from "lucide-react";
 import tareqr from "../../assets/tareqvision.mp4";
 
 export default function MissionSection() {
+  const videoRef = useRef<HTMLVideoElement>(null); // ভিডিও এলিমেন্ট ধরার জন্য
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoRef.current?.play().catch((error) => {
+              // অটো-প্লে ব্লক পলিসির কারণে এরর হ্যান্ডেল করার জন্য
+              console.log("Autoplay prevented:", error);
+            });
+          } else {
+            videoRef.current?.pause();
+          }
+        });
+      },
+      { threshold: 0.5 } // সেকশনের ৫০% স্ক্রিনে আসলে প্লে শুরু হবে
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="bg-[#1a1c1e] text-white p-6 md:p-16 md:rounded-[150px] rounded-[40px] mx-auto overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -18,27 +49,25 @@ export default function MissionSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* Left Side: Video Section (Responsive & Rounded) */}
+          {/* Left Side: Video Section */}
           <div className="flex justify-center items-center order-1">
             <div className="relative w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[450px] aspect-square">
               {/* Outer Decorative Ring */}
               <div className="absolute -inset-4 border-2 border-dashed border-[#0098FD]/30 rounded-full animate-[spin_20s_linear_infinite]" />
               
-              {/* Main Video Container */}
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-[#232629] shadow-[0_0_50px_rgba(0,152,253,0.2)]">
                 <video
-                  className="w-full h-full object-cover scale-110" // scale-110 ব্যবহার করা হয়েছে যাতে কিনারায় গ্যাপ না থাকে
-                  autoPlay
-                 
+                  ref={videoRef} 
+                  className="w-full h-full object-cover scale-110"
+                  muted 
                   loop
                   playsInline
-                  controls // প্রিমিয়াম লুকের জন্য কন্ট্রোল অফ রাখা ভালো, চাইলে true দিতে পারেন
+                  controls={false}
                 >
                   <source src={tareqr} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
-                {/* Overlay to match theme */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e]/40 to-transparent pointer-events-none" />
               </div>
             </div>
@@ -46,7 +75,6 @@ export default function MissionSection() {
 
           {/* Right Side: Content */}
           <div className="space-y-8 order-2">
-            {/* Quote Card */}
             <div className="relative bg-[#232629] p-8 rounded-3xl shadow-xl border border-white/5">
               <Quote className="text-[#0098FD] mb-4 h-8 w-8 opacity-50" />
               <p className="md:text-xl text-base leading-relaxed text-slate-200 mb-8 font-medium">
@@ -68,7 +96,6 @@ export default function MissionSection() {
               </div>
             </div>
 
-            {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
               {[
                 { label: "প্রাথমিক বিদ্যালয়", val: "৫ লক্ষ+" },
@@ -82,7 +109,6 @@ export default function MissionSection() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -35,19 +35,19 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Solutions</h3>
                 <ul className="mt-4 space-y-2">
-                  <FooterLink label="OneTab ERP" />
-                  <FooterLink label="OneBoard" />
-                  <FooterLink label="OneBook" />
-                  <FooterLink label="Smart Attendance" />
+                  <FooterLink id="onetab" label="OneTab ERP" />
+                  <FooterLink id="oneboard" label="OneBoard" />
+                  <FooterLink id="onebook" label="OneBook" />
+                  <FooterLink id="smart-attendance" label="Smart Attendance" />
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Support</h3>
                 <ul className="mt-4 space-y-2">
-                  <FooterLink label="Documentation" />
-                  <FooterLink label="Guides" />
-                  <FooterLink label="API Status" />
-                  <FooterLink label="Privacy Policy" />
+                  <FooterLink id="document" label="Documentation" />
+                  <FooterLink id="guide" label="Guides" />
+                  <FooterLink id="apistatus" label="API Status" />
+                  <FooterLink id="privacy" label="Privacy Policy" />
                 </ul>
               </div>
             </div>
@@ -92,10 +92,10 @@ export default function Footer() {
 }
 
 // Helper Components
-function FooterLink({ label }: { label: string }) {
+function FooterLink({ label,id }: { label: string,id:string }) {
   return (
     <li>
-      <a href="#" className="text-sm text-slate-500 dark:text-slate-400 hover:text-[#0098FD] dark:hover:text-[#0098FD] transition-colors">
+      <a href={`#${id}`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-[#0098FD] dark:hover:text-[#0098FD] transition-colors">
         {label}
       </a>
     </li>
