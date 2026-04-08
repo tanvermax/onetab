@@ -42,19 +42,19 @@ export default function TeacherTraining() {
             whileInView={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
-            <div className="inline-flex items-center gap-2 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-indigo-50 dark:bg-indigo-900/20 text-[#0098FD] px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest">
               <GraduationCap size={16} />
               Professional Development
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
               প্রযুক্তিতে দক্ষ শিক্ষক, <br />
-              <span className="text-indigo-600">স্মার্ট বাংলাদেশের কারিগর।</span>
+              <span className="text-[#0098FD]">স্মার্ট বাংলাদেশের কারিগর।</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
               আমরা শুধু ডিভাইস দিচ্ছি না, বরং প্রতিটি শিক্ষককে একজন ডিজিটাল বিশেষজ্ঞ হিসেবে গড়ে তুলছি। আমাদের বিশেষ ট্রেনিং প্রোগ্রামের মাধ্যমে আপনি শিখবেন আধুনিক বিশ্বের সমসাময়িক পাঠদান পদ্ধতি।
             </p>
             
-            <Link to={"/teachertrainingpage"} className="flex items-center gap-3 bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-600/20">
+            <Link to={"/teachertrainingpage"} className="flex items-center gap-3 bg-[#0098FD] text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-[#0098FD]/20">
               ট্রেনিং মডিউল দেখুন <Compass size={20} />
             </Link >
           </motion.div>

@@ -51,9 +51,9 @@ export default function UserSolutions() {
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 text-emerald-600 font-bold text-sm uppercase tracking-widest mb-4"
+              className="flex items-center gap-2 text-[#0098FD] font-bold text-sm uppercase tracking-widest mb-4"
             >
-              <div className="h-1 w-8 bg-emerald-600 rounded-full" />
+              <div className="h-1 w-8 bg-[#0098FD] rounded-full" />
               ব্যবহারকারী অনুযায়ী সমাধান
             </motion.div>
             <motion.h2 
@@ -62,7 +62,7 @@ export default function UserSolutions() {
               className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white"
             >
               আপনার প্রয়োজন মেটাতে <br />
-              <span className="text-emerald-600">সব আধুনিক টুলস</span>
+              <span className="text-[#0098FD]">সব আধুনিক টুলস</span>
             </motion.h2 >
           </div>
           <motion.p 
@@ -102,13 +102,13 @@ export default function UserSolutions() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="mt-16 p-8 rounded-[2rem] bg-emerald-600 text-white flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-16 p-8 rounded-[2rem] bg-[#0098FD] text-white flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div>
             <h4 className="text-2xl font-bold">আজই আপনার যাত্রা শুরু করুন</h4>
             <p className="text-emerald-100 opacity-80">ফ্রিতে অ্যাকাউন্ট তৈরি করে ডিজিটাল শিক্ষার নতুন অভিজ্ঞতা নিন।</p>
           </div>
-          <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-emerald-50 transition-colors">
+          <button className="bg-white text-[#0098FD] px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-emerald-50 transition-colors">
             অ্যাকাউন্ট তৈরি করুন
           </button>
         </motion.div>

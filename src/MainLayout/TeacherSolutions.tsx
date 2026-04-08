@@ -36,13 +36,13 @@ export default function TeacherSolutions() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-2 text-blue-600 font-bold text-sm uppercase tracking-widest mb-4">
-              <div className="h-1 w-8 bg-blue-600 rounded-full" />
+            <div className="flex items-center gap-2 text-[#0098FD] font-bold text-sm uppercase tracking-widest mb-4">
+              <div className="h-1 w-8 bg-[#0098FD] rounded-full" />
               শিক্ষকদের জন্য সমাধান
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight">
               শিক্ষকতাই হোক আপনার মূল কাজ, <br />
-              <span className="text-blue-600">বাকিটা আমাদের ওপর।</span>
+              <span className="text-[#0098FD]">বাকিটা আমাদের ওপর।</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-lg mb-10 leading-relaxed">
               কাগজ-কলমের ঝামেলা এড়িয়ে ডিজিটাল পদ্ধতিতে ক্লাস ম্যানেজমেন্ট করুন। আমরা শিক্ষকদের জন্য এনেছি এমন এক ইকোসিস্টেম যা সময় বাঁচায় এবং পাঠদানকে আনন্দদায়ক করে।
@@ -71,12 +71,12 @@ export default function TeacherSolutions() {
             className="relative"
           >
             {/* Main Image/Mockup */}
-            <div className="relative rounded-[3rem] bg-gradient-to-br from-blue-600 to-indigo-700 p-1">
+            <div className="relative rounded-[3rem] bg-gradient-to-br from-[#0098FD] to-indigo-700 p-1">
               <div className="bg-white dark:bg-slate-900 rounded-[2.8rem] overflow-hidden p-8 shadow-2xl">
                 <div className="flex items-center justify-between mb-8 border-b border-slate-100 dark:border-slate-800 pb-4">
                   <div className="flex items-center gap-3">
                     <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                      <GraduationCap className="text-blue-600" />
+                      <GraduationCap className="text-[#0098FD]" />
                     </div>
                     <div>
                       <h5 className="font-bold text-slate-900 dark:text-white text-sm">Teacher Dashboard</h5>
@@ -90,13 +90,13 @@ export default function TeacherSolutions() {
                 <div className="space-y-4">
                   <div className="h-32 rounded-2xl bg-slate-50 dark:bg-slate-800/50 flex items-center justify-center border-2 border-dashed border-slate-200 dark:border-slate-700">
                     <div className="text-center">
-                      <p className="text-2xl font-black text-blue-600">85%</p>
+                      <p className="text-2xl font-black text-[#0098FD]">85%</p>
                       <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Syllabus Completed</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="h-20 rounded-xl bg-blue-50 dark:bg-blue-900/20 p-4">
-                      <p className="text-[10px] text-blue-600 font-bold uppercase">Today's Class</p>
+                      <p className="text-[10px] text-[#0098FD] font-bold uppercase">Today's Class</p>
                       <p className="text-lg font-bold text-slate-700 dark:text-slate-300">04</p>
                     </div>
                     <div className="h-20 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 p-4">
