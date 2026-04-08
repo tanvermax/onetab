@@ -44,12 +44,11 @@ export default function Footer() {
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Support</h3>
                 <ul className="mt-4 space-y-2">
-                  {/* <FooterLink id="document" label="Documentation" /> */}
                   <FooterLink id="guide" label="Guides" />
-                  {/* <FooterLink id="apistatus" label="API Status" /> */}
-                  <FooterLink id="privacy" label="Privacy Policy" />
+                  {/* <FooterLink id="privacy" label="Privacy Policy" /> */}
                 </ul>
               </div>
+              
             </div>
             
             {/* Newsletter or Badges Area */}
