@@ -59,7 +59,7 @@ export default function MissionSection() {
                 <video
                   ref={videoRef} 
                   className="w-full h-full object-cover scale-110"
-                  muted 
+                
                   loop
                   playsInline
                   controls={false}
