@@ -99,7 +99,7 @@ const Navbar = () => {
         {/* MOBILE TOGGLE */}
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden text-white">
           <motion.div animate={{ rotate: isMenuOpen ? 90 : 0 }}>
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X className="text-[#0098FD]" size={28} /> : <Menu className="text-[#0098FD]" size={28} />}
           </motion.div>
         </button>
       </motion.div>
@@ -112,14 +112,14 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-x-4 top-24 z-40 overflow-hidden rounded-[2.5rem] bg-[#0f2a1a]/95 backdrop-blur-xl border border-white/10 p-8 text-white shadow-2xl lg:hidden"
+            className="fixed inset-x-4 top-24 z-40 overflow-hidden rounded-[2.5rem] bg-[#0098FD] backdrop-blur-xl border border-white/10 p-8 text-white shadow-2xl lg:hidden"
           >
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <div key={link.name} className="border-b border-white/5">
                   <button
                     onClick={() => setActiveMobileMenu(activeMobileMenu === link.name ? null : link.name)}
-                    className="flex w-full items-center justify-between py-4 text-xl font-bold"
+                    className="flex w-full items-center justify-between py-4 text-xl font-light"
                   >
                     {link.name}
                     <motion.div animate={{ rotate: activeMobileMenu === link.name ? 180 : 0 }}>
@@ -142,12 +142,12 @@ const Navbar = () => {
                             onClick={closeMenu}
                             initial={{ x: -20 }}
                             animate={{ x: 0 }}
-                            className="flex items-center gap-4 rounded-2xl bg-white/5 p-4"
+                            className="flex items-center gap-4 rounded-2xl bg-white text-black p-4"
                           >
                             <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${item.iconBg}`}>
                               {item.icon}
                             </div>
-                            <span className="text-sm font-medium">{item.name}</span>
+                            <span className="text-sm font-medium ">{item.name}</span>
                           </motion.a>
                         ))}
                       </motion.div>
@@ -158,7 +158,7 @@ const Navbar = () => {
               
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col gap-4">
                  <Link to={"https://notearch.com/login"} className="w-full
-                  rounded-2xl border border-white/10 py-4 font-bold">Login</Link>
+                  rounded-2xl border border-white/10 py-4 text-center font-normal">Login</Link>
               </motion.div>
             </nav>
           </motion.div>
