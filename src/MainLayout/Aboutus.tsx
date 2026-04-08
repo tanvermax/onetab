@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Users2, Rocket } from "lucide-react";
+import studentAnimation from "../../src/assets/learning.json"
+
+
+import Lottie from "lottie-react";
+
+  const LottieComponent = (Lottie as any).default || Lottie;
+
 
 const stats = [
   { label: "NPT Targets", value: "9-13", icon: <Target className="text-[#0098FD]" /> },
@@ -42,10 +49,10 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
-              বাংলাদেশের **Sustainable Development Goals (SDGs)**-এর অংশ হিসেবে **Goal 4: Quality Education** অর্জনে আমরা বদ্ধপরিকর। জাতীয় অগ্রাধিকারমূলক লক্ষ্যসমূহ (NPT: 9-13) এর সাথে সামঞ্জস্য রেখে প্রচলিত শিক্ষাব্যবস্থাকে আমরা প্রযুক্তিনির্ভর করে তুলছি। 
+              বাংলাদেশের Sustainable Development Goals (SDGs)-এর অংশ হিসেবে Goal 4: Quality Education অর্জনে আমরা বদ্ধপরিকর। জাতীয় অগ্রাধিকারমূলক লক্ষ্যসমূহ (NPT: 9-13) এর সাথে সামঞ্জস্য রেখে প্রচলিত শিক্ষাব্যবস্থাকে আমরা প্রযুক্তিনির্ভর করে তুলছি। 
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-justify">
-              বাংলাদেশ সরকারের **One-Teacher-One-Tab** ভাবনা থেকে অনুপ্রাণিত হয়ে আমরা তৈরি করেছি এক সমন্বিত ডিজিটাল ইকোসিস্টেম। যেখানে **OneTab, OneBoard** এবং **OneBook**-এর মাধ্যমে শিক্ষক, শিক্ষার্থী এবং অভিভাবকদের এক সুতোয় গেঁথে শিক্ষার সর্বোচ্চ সফলতা নিশ্চিত করা হয়।
+              বাংলাদেশ সরকারের One-Teacher-One-Tab ভাবনা থেকে অনুপ্রাণিত হয়ে আমরা তৈরি করেছি এক সমন্বিত ডিজিটাল ইকোসিস্টেম। যেখানে OneTab, OneBoard এবং OneBook-এর মাধ্যমে শিক্ষক, শিক্ষার্থী এবং অভিভাবকদের এক সুতোয় গেঁথে শিক্ষার সর্বোচ্চ সফলতা নিশ্চিত করা হয়।
             </p>
 
             {/* Stats Grid */}
@@ -69,11 +76,11 @@ export default function AboutSection() {
           >
             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
                {/* এখানে আপনার একটি প্রফেশনাল ইমেজ বা লটি অ্যানিমেশন বসাতে পারেন */}
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" 
-                alt="Digital Education" 
-                className="w-full h-[400px] object-cover"
-              />
+             <LottieComponent 
+              animationData={studentAnimation} 
+              loop={true} 
+              className="w-full h-auto max-w-125 mx-auto"
+            />
               <div className="absolute inset-0 bg-[#0098FD]/10 mix-blend-multiply" />
             </div>
 

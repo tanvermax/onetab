@@ -93,12 +93,7 @@ export default function OneBookSection() {
             </div>
           </div>
 
-          {/* <div className="flex flex-wrap gap-4 pt-4 border-t border-slate-100">
-            <Button className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-6 rounded-xl font-bold text-lg flex gap-3 shadow-lg shadow-violet-100">
-              Access OneBook <ArrowRight className="h-5 w-5" />
-            </Button>
-           
-          </div> */}
+         
         </div>
 
         {/* --- RIGHT SIDE: LOTTIE ANIMATION --- */}
