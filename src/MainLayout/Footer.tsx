@@ -60,9 +60,9 @@ export default function Footer() {
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Solutions</h3>
                 <ul className="mt-4 space-y-2">
-                  <FooterLink id="onetab" label="OneTab ERP" />
-                  <FooterLink id="oneboard" label="OneBoard" />
-                  <FooterLink id="onebook" label="OneBook" />
+                  <FooterLink id="/#onetab" label="OneTab ERP" />
+                  <FooterLink id="/#oneboard" label="OneBoard" />
+                  <FooterLink id="/#onebook" label="OneBook" />
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
