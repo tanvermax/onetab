@@ -1,38 +1,22 @@
-import { useEffect, useRef } from "react"; // useRef এবং useEffect লাগবে
-import { Quote } from "lucide-react";
+import { useRef, useState } from "react";
+import { Quote, Play } from "lucide-react"; // Play icon add kora hoyeche
 import tareqr from "../../assets/tareqvision.mp4";
 
 export default function MissionSection() {
-  const videoRef = useRef<HTMLVideoElement>(null); // ভিডিও এলিমেন্ট ধরার জন্য
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            videoRef.current?.play().catch((error) => {
-              // অটো-প্লে ব্লক পলিসির কারণে এরর হ্যান্ডেল করার জন্য
-              console.log("Autoplay prevented:", error);
-            });
-          } else {
-            videoRef.current?.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // সেকশনের ৫০% স্ক্রিনে আসলে প্লে শুরু হবে
-    );
-
+  const togglePlay = () => {
     if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
       }
-    };
-  }, []);
-
+    }
+  };
   return (
     <div className="bg-[#1a1c1e] text-white p-6 md:p-16 md:rounded-[150px] rounded-[40px] mx-auto overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -55,25 +39,37 @@ export default function MissionSection() {
               {/* Outer Decorative Ring */}
               <div className="absolute -inset-4 border-2 border-dashed border-[#0098FD]/30 rounded-full animate-[spin_20s_linear_infinite]" />
               
-              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-[#232629] shadow-[0_0_50px_rgba(0,152,253,0.2)]">
-                <video
+              <div 
+                className="relative h-full w-full rounded-full overflow-hidden border-4 border-[#232629] shadow-[0_0_50px_rgba(0,152,253,0.2)] cursor-pointer group"
+                onClick={togglePlay}
+              >
+               <video
                   ref={videoRef} 
                   className="w-full h-full object-cover scale-110"
-                
                   loop
                   playsInline
-                  controls={false}
+                  // AutoPlay false rakha hoyeche jate user click korle e chalu hoy
                 >
                   <source src={tareqr} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e]/40 to-transparent pointer-events-none" />
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e]/60 to-transparent pointer-events-none" />
+
+                {/* Play Button Overlay */}
+                {!isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300">
+                    <div className=" p-5 rounded-full border border-[#0098FD]  transform transition-transform group-hover:scale-110 active:scale-95">
+                      <Play size={40}  className=" ml-1 text-[#0098FD]" />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
-          {/* Right Side: Content */}
+          {/* Right Side: Content remains same */}
           <div className="space-y-8 order-2">
             <div className="relative bg-[#232629] p-8 rounded-3xl shadow-xl border border-white/5">
               <Quote className="text-[#0098FD] mb-4 h-8 w-8 opacity-50" />
