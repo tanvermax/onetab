@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
  <header className="sticky top-0 z-50 w-full px-4 py-4">
-      {/* ২. মেইন কন্টেইনারে হালকা এন্ট্রান্স অ্যানিমেশন */}
+    
       <motion.div 
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -45,7 +45,7 @@ const Navbar = () => {
         <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
             <div key={link.name} className="group relative px-4 py-2">
-              <button className="flex items-center gap-1.5 text-sm font-semibold transition-colors hover:text-white">
+              <button className="flex items-center gap-1.5 text-sm font-semibold transition-colors hover:text-[#0098FD]">
                 {link.name}
                 <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
               </button>

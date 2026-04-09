@@ -48,7 +48,6 @@ export default function MissionSection() {
                   className="w-full h-full object-cover scale-110"
                   loop
                   playsInline
-                  // AutoPlay false rakha hoyeche jate user click korle e chalu hoy
                 >
                   <source src={tareqr} type="video/mp4" />
                   Your browser does not support the video tag.
