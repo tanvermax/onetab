@@ -1,6 +1,6 @@
 import { Badge } from "../components/ui/badge";
 import { Mail } from "lucide-react";
-import { BsFacebook, BsTwitterX } from "react-icons/bs";
+import { BsApple, BsFacebook, BsGooglePlay, BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { PiYoutubeLogoLight } from "react-icons/pi";
 import notearch from "../assets/logonotearch.png";
@@ -11,19 +11,42 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
+   <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:py-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           
-          {/* Brand Section */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <img className="w-32" src={notearch} alt="NoteArch Logo" />
+          {/* Brand & Download Section */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="flex items-center gap-2">
+                <img className="w-32" src={notearch} alt="NoteArch Logo" />
+              </div>
+              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                শিক্ষাদান ডিজিটাল করার সম্পূর্ণ সমাধান। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহার শিক্ষাব্যবস্থায় বৈপ্লবিক পরিবর্তন আনতে পারে।
+              </p>
             </div>
-            <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
-              শিক্ষাদান ডিজিটাল করার সম্পূর্ণ সমাধান। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহার শিক্ষাব্যবস্থায় বৈপ্লবিক পরিবর্তন আনতে পারে।
-            </p>
-            <div className="flex gap-4">
+
+          
+            <div className="space-y-3 pt-2">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Get the App</h4>
+                <div className="flex flex-col sm:flex-row xl:flex-row gap-3">
+                    <DownloadButton 
+                        icon={<BsGooglePlay size={20} className="text-[#0098FD] group-hover:text-white" />} 
+                        storeName="Google Play" 
+                        action="Get it on" 
+                        href="https://play.google.com/store/apps/details?id=com.teknosoft.notearch.academy" 
+                    />
+                    <DownloadButton 
+                        icon={<BsApple size={20} className="text-[#0098FD] group-hover:text-white" />} 
+                        storeName="App Store" 
+                        action="Download for Mac" 
+                        href="https://apps.apple.com/gb/app/notearch/id6756450121" 
+                    />
+                </div>
+            </div>
+
+            {/* Social Icons - Moved Below Buttons */}
+            <div className="flex gap-4 pt-2">
               <SocialIcon icon={<BsFacebook size={18} />} href="#" />
               <SocialIcon icon={<BsTwitterX size={18} />} href="#" />
               <SocialIcon icon={<FaLinkedin size={18} />} href="#" />
@@ -45,42 +68,29 @@ export default function Footer() {
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Support</h3>
                 <ul className="mt-4 space-y-2">
-                  <FooterLink id="guide" label="Guides" />
-                  <FooterLink id="contact" label="Contact Us" />
+                  <FooterLink id="https://notearch.com/#contact-us" label="Contact Us" />
                 </ul>
               </div>
             </div>
             
-            {/* Compliance Section with Logos */}
+            {/* Compliance Section */}
             <div className="space-y-6">
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Our Compliance</h3>
               
               <div className="flex flex-col gap-4">
-                {/* SDG Goal Item */}
                 <div className="flex items-center gap-3 group">
-                  <img 
-                    src={sdgLogo} 
-                    alt="SDG Wheel" 
-                    className="w-10 h-10 object-contain group-hover:rotate-12 transition-transform" 
-                  />
+                  <img src={sdgLogo} alt="SDG Wheel" className="w-10 h-10 object-contain group-hover:rotate-12 transition-transform" />
                   <div>
-                    <Badge variant="outline" className="text-[#E5243B] border-red-100 bg-red-50 dark:bg-red-900/10 dark:border-red-900/30 px-2 py-0.5 rounded-md text-[9px] font-bold">
-                      GOAL 4
-                    </Badge>
+                    <Badge variant="outline" className="text-[#E5243B] border-red-100 bg-red-50 dark:bg-red-900/10 dark:border-red-900/30 px-2 py-0.5 rounded-md text-[9px] font-bold">GOAL 4</Badge>
                     <p className="text-[11px] font-bold text-slate-700 dark:text-slate-300 mt-1">Quality Education</p>
                   </div>
                 </div>
 
-                {/* NPT Compliance Item */}
                 <div className="flex items-center gap-3 group">
-                  <div className="w-10 h-10 rounded-full bg-[#0098FD] flex items-center justify-center text-[10px] font-black text-white shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
-                    NPT
-                  </div>
+                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-black text-white shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">NPT</div>
                   <div>
-                    <Badge variant="outline" className="text-[#0098FD] border-[#0098FD] bg-blue-50 dark:bg-blue-900/10 dark:border-blue-900/30 px-2 py-0.5 rounded-md text-[9px] font-bold">
-                      9–13
-                    </Badge>
-                    <p className="text-[11px] font-bold text-slate-700 dark:text-slate-300 mt-1">National Policy Targets</p>
+                    <Badge variant="outline" className="text-blue-600 border-blue-100 bg-blue-50 dark:bg-blue-900/10 dark:border-blue-900/30 px-2 py-0.5 rounded-md text-[9px] font-bold">9–13</Badge>
+                    <p className="text-[11px] font-bold text-slate-700 dark:text-slate-300 mt-1">National Policy Compliant</p>
                   </div>
                 </div>
               </div>
@@ -100,9 +110,9 @@ export default function Footer() {
             © {currentYear} NoteArch Education. সর্বস্বত্ব সংরক্ষিত।
           </p>
           <div className="flex gap-6 text-xs text-slate-400">
-             <a href="#" className="hover:text-[#0098FD] transition-colors">Terms of Service</a>
-             <a href="#" className="hover:text-[#0098FD] transition-colors">Privacy Policy</a>
-             <a href="#" className="hover:text-[#0098FD] transition-colors">Cookies</a>
+             <a href="https://notearch.com/page/type/terms-conditions" className="hover:text-[#0098FD] transition-colors">Terms of Service</a>
+             <a href="https://notearch.com/page/type/privacy-policy" className="hover:text-[#0098FD] transition-colors">Privacy Policy</a>
+             {/* <a href="#" className="hover:text-[#0098FD] transition-colors">Cookies</a> */}
           </div>
         </div>
       </div>
@@ -111,10 +121,10 @@ export default function Footer() {
 }
 
 // Helper Components
-function FooterLink({ label, id }: { label: string, id: string }) {
+function FooterLink({ label, id, }: { label: string, id: string }) {
   return (
     <li>
-      <a href={`/#${id}`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-[#0098FD] dark:hover:text-[#0098FD] transition-colors">
+      <a href={`${id}`} className="text-sm text-slate-500 dark:text-slate-400 hover:text-[#0098FD] dark:hover:text-[#0098FD] transition-colors">
         {label}
       </a>
     </li>
@@ -130,4 +140,20 @@ function SocialIcon({ icon, href }: { icon: React.ReactNode; href: string }) {
       {icon}
     </a>
   );
+}
+function DownloadButton({ icon, storeName, action, href }: { icon: React.ReactNode, storeName: string, action: string, href: string }) {
+    return (
+        <a 
+            href={href} 
+            className="flex items-center gap-3 w-fit sm:w-auto xl:w-full min-w-[160px] p-2 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:bg-[#0098FD] hover:border-[#0098FD] group transition-all duration-300 shadow-sm"
+        >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white dark:bg-slate-800 group-hover:bg-[#0098FD]/10 transition-colors">
+                {icon}
+            </div>
+            <div className="flex flex-col">
+                <p className="text-[10px] text-slate-400 dark:text-slate-500 group-hover:text-white/80">{action}</p>
+                <p className="text-sm font-black text-slate-900 dark:text-white group-hover:text-white">{storeName}</p>
+            </div>
+        </a>
+    );
 }
