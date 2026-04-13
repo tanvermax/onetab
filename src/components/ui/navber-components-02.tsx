@@ -21,7 +21,7 @@ const Navbar = () => {
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#ffffff] px-6 py-4 shadow-2xl border border-white/5"
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#ffffff]/10 px-6 py-4 shadow-2xl border backdrop-blur-md border-white/5"
       >
         {/* LOGO */}
         <Link
