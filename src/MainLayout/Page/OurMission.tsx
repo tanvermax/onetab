@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   Target, 
   Cpu, 
-  Users, 
+
   ShieldCheck, 
   FilePieChart, 
   Globe, 
@@ -37,7 +37,7 @@ export default function MissionPage() {
   return (
     <div className="bg-white dark:bg-slate-950">
       {/* 1. Hero: The Core Mission */}
-      <section className="relative py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
+      <section className="relative py-24 bg-linear-to-b from-slate-50 to-white dark:from-slate-900/50 dark:to-slate-950">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
