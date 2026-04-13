@@ -13,6 +13,7 @@ import TeacherTrainingPage from "../MainLayout/TeacherTrainingPage";
 import SecuritySection from "../MainLayout/SecuritySection";
 import AboutUs from "../MainLayout/Page/AboutUs";
 import MissionPage from "../MainLayout/Page/OurMission";
+import VisionPage from "../MainLayout/Page/OurVision";
 // import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
       {
         Component:MissionPage,
         path:"/ourmission"
+      },
+      {
+        Component:VisionPage,
+        path:"/ourvision"
       }
     ]
   },

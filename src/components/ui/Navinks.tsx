@@ -122,10 +122,14 @@ export const navLinks = [
   ,
   {
     name: "About Us",
-    href: "/aboutus"
+    href: "/aboutus",
   },
-   {
+  {
     name: "Our Mission",
-    href: "/ourmission"
+    href: "/ourmission",
   },
+  {
+    name:"Vision",
+    href:"/ourvision"
+  }
 ];
