@@ -102,7 +102,7 @@ export default function AboutUs() {
       <section className="py-24 bg-[#0098FD] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
             {/* Background pattern or dots */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#fff_1px,transparent_1px)] bg-size-[20px_20px]" />
         </div>
         
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
