@@ -11,6 +11,8 @@ import DigitalLibrary from "../MainLayout/DigitalLibrary";
 import TeacherTraining from "../MainLayout/TeacherTraining";
 import TeacherTrainingPage from "../MainLayout/TeacherTrainingPage";
 import SecuritySection from "../MainLayout/SecuritySection";
+import AboutUs from "../MainLayout/Page/AboutUs";
+import MissionPage from "../MainLayout/Page/OurMission";
 // import { createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -24,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         Component:AboutSection,
-        path:"/about"
+        path:"/whyonetab"
       },
       {
         Component:SDGSection,
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
       {
         Component:SecuritySection,
         path:"/security"
+      },
+      {
+        Component:AboutUs,
+        path:"/aboutus"
+      },
+      {
+        Component:MissionPage,
+        path:"/ourmission"
       }
     ]
   },

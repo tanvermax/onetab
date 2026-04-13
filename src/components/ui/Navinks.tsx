@@ -1,5 +1,3 @@
-
-
 import {
   Tablet,
   Monitor,
@@ -113,12 +111,21 @@ export const navLinks = [
         iconBg: "bg-blue-50",
       },
       {
-        name: "About Us",
-        href: "about", // আপনার Mission সেকশনের ID
+        name: "Why OneTab",
+        href: "whyonetab", // আপনার Mission সেকশনের ID
         desc: "আমাদের যাত্রা ও টিম",
         icon: <Users className="w-5 h-5 text-indigo-500" />,
         iconBg: "bg-indigo-50",
       },
     ],
+  },
+  ,
+  {
+    name: "About Us",
+    href: "/aboutus"
+  },
+   {
+    name: "Our Mission",
+    href: "/ourmission"
   },
 ];
