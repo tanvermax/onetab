@@ -152,7 +152,8 @@ const Navbar = () => {
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <div key={link?.name} className="border-b border-white/5">
-                  <button
+                 {
+                  link?.nestednav?.length as number > 0 ? <> <button
                     onClick={() =>
                       setActiveMobileMenu(
                         (activeMobileMenu === link?.name ? (
@@ -173,7 +174,14 @@ const Navbar = () => {
                       <ChevronDown size={20} />
                     </motion.div>
                   </button>
-
+</>:<>
+<Link to={link?.href || "#"}>
+  <button className="flex w-full items-center justify-between py-4 text-xl font-light">
+    {link?.name}
+  </button>
+</Link>
+</>
+                 }
                   <AnimatePresence>
                     {activeMobileMenu === link?.name && (
                       <motion.div
