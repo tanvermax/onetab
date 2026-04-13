@@ -145,7 +145,7 @@ function DownloadButton({ icon, storeName, action, href }: { icon: React.ReactNo
     return (
         <a 
             href={href} 
-            className="flex items-center gap-3 w-fit sm:w-auto xl:w-full min-w-[160px] p-2 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:bg-[#0098FD] hover:border-[#0098FD] group transition-all duration-300 shadow-sm"
+            className="flex items-center gap-3 w-fit sm:w-auto xl:w-full min-w-40 p-2 px-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:bg-[#0098FD] hover:border-[#0098FD] group transition-all duration-300 shadow-sm"
         >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white dark:bg-slate-800 group-hover:bg-[#0098FD]/10 transition-colors">
                 {icon}

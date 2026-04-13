@@ -88,7 +88,7 @@ export default function AboutSection() {
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl max-w-[200px] border border-emerald-100 dark:border-emerald-900"
+              className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-xl max-w-50 border border-emerald-100 dark:border-emerald-900"
             >
               <div className="flex items-center gap-3 mb-2">
                 <div className="h-3 w-3 rounded-full bg-[#0098FD] animate-pulse" />

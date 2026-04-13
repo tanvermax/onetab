@@ -52,12 +52,12 @@ const Navbar = () => {
                   </button>
                 </>
               ) : (
-                <Link className="text-sm font-semibold transition-colors hover:text-[#0098FD]"
-                 to={link?.href as string}>
-               
-               
+                <Link
+                  className="text-sm font-semibold transition-colors hover:text-[#0098FD]"
+                  to={link?.href as string}
+                >
                   {link?.name}
-               </Link>
+                </Link>
               )}
 
               {/* ৩. ডেস্কটপ মেগা মেনু অ্যানিমেশন */}
@@ -66,7 +66,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: 15, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.2, ease: "easeOut" }}
-                  className="invisible absolute left-1/2 top-full w-[500px] -translate-x-1/2 pt-6 opacity-0 group-hover:visible group-hover:opacity-100"
+                  className="invisible absolute left-1/2 top-full w-125 -translate-x-1/2 pt-6 opacity-0 group-hover:visible group-hover:opacity-100"
                 >
                   {(link?.nestednav?.length as number) > 0 ? (
                     <>
@@ -152,36 +152,40 @@ const Navbar = () => {
             <nav className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <div key={link?.name} className="border-b border-white/5">
-                 {
-                  link?.nestednav?.length as number > 0 ? <> <button
-                    onClick={() =>
-                      setActiveMobileMenu(
-                        (activeMobileMenu === link?.name ? (
-                          <></>
-                        ) : (
-                          link?.name
-                        )) as any,
-                      )
-                    }
-                    className="flex w-full items-center justify-between py-4 text-xl font-light"
-                  >
-                    {link?.name}
-                    <motion.div
-                      animate={{
-                        rotate: activeMobileMenu === link?.name ? 180 : 0,
-                      }}
-                    >
-                      <ChevronDown size={20} />
-                    </motion.div>
-                  </button>
-</>:<>
-<Link to={link?.href || "#"}>
-  <button className="flex w-full items-center justify-between py-4 text-xl font-light">
-    {link?.name}
-  </button>
-</Link>
-</>
-                 }
+                  {(link?.nestednav?.length as number) > 0 ? (
+                    <>
+                      {" "}
+                      <button
+                        onClick={() =>
+                          setActiveMobileMenu(
+                            (activeMobileMenu === link?.name ? (
+                              <></>
+                            ) : (
+                              link?.name
+                            )) as any,
+                          )
+                        }
+                        className="flex w-full items-center justify-between py-4 text-xl font-light"
+                      >
+                        {link?.name}
+                        <motion.div
+                          animate={{
+                            rotate: activeMobileMenu === link?.name ? 180 : 0,
+                          }}
+                        >
+                          <ChevronDown size={20} />
+                        </motion.div>
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <Link to={link?.href || "#"}>
+                        <button className="flex w-full items-center justify-between py-4 text-xl font-light">
+                          {link?.name}
+                        </button>
+                      </Link>
+                    </>
+                  )}
                   <AnimatePresence>
                     {activeMobileMenu === link?.name && (
                       <motion.div
