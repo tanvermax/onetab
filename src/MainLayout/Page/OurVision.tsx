@@ -117,7 +117,7 @@ export default function VisionPage() {
       {/* 4. Integration & Crisis Management (The Joint Platform) */}
       <section className="py-24 bg-[#0098FD] relative overflow-hidden">
         {/* Animated Background Rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 border border-white/10 rounded-full animate-pulse" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10 text-white">
           <Infinity size={48} className="mx-auto mb-8 opacity-50" />
