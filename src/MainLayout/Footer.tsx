@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 import { BsApple, BsFacebook, BsGooglePlay, BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { PiYoutubeLogoLight } from "react-icons/pi";
-import notearch from "../assets/logonotearch.png";
+
 // SDG লোগো ইম্পোর্ট করুন
 import sdgLogo from "../assets/SDG Wheel_Transparent_WEB.png"; 
 import Logo from "../components/ui/logo";

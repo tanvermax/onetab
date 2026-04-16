@@ -3,7 +3,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router";
 import { navLinks } from "./Navinks";
 import { motion, AnimatePresence } from "framer-motion";
-import notearch from "../../assets/OneTab12.svg";
+
 import Logo from "./logo";
 // import { OneTabLogo } from "./logo";
 // import { BsFillTabletFill } from "react-icons/bs";
