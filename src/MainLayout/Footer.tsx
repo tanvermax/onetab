@@ -6,6 +6,7 @@ import { PiYoutubeLogoLight } from "react-icons/pi";
 import notearch from "../assets/logonotearch.png";
 // SDG লোগো ইম্পোর্ট করুন
 import sdgLogo from "../assets/SDG Wheel_Transparent_WEB.png"; 
+import Logo from "../components/ui/logo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,7 +20,7 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <img className="w-32" src={notearch} alt="NoteArch Logo" />
+               <Logo/>
               </div>
               <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
                 শিক্ষাদান ডিজিটাল করার সম্পূর্ণ সমাধান। আমরা বিশ্বাস করি প্রযুক্তির সঠিক ব্যবহার শিক্ষাব্যবস্থায় বৈপ্লবিক পরিবর্তন আনতে পারে।
