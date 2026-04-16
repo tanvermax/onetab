@@ -3,7 +3,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router";
 import { navLinks } from "./Navinks";
 import { motion, AnimatePresence } from "framer-motion";
-import notearch from "../../assets/logonotearch.png";
+import notearch from "../../assets/OneTab12.svg";
+// import { OneTabLogo } from "./logo";
+// import { BsFillTabletFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +23,7 @@ const Navbar = () => {
       <motion.div
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#ffffff]/10 px-6 py-4 shadow-2xl border backdrop-blur-md border-white/5"
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl bg-[#ffffff]/10 px-6 py-2 shadow-2xl border backdrop-blur-md border-white/5"
       >
         {/* LOGO */}
         <Link
@@ -33,7 +35,20 @@ const Navbar = () => {
             whileHover={{ rotate: 10, scale: 1.1 }} // লোগো হোভার অ্যানিমেশন
             className=""
           ></motion.div>
-          <img className="w-30" src={notearch} alt="" />
+
+          <img className="w-40 object-cover -top-2 relative h-17" src={notearch} alt="" />
+          {/* <OneTabLogo/> */}
+          {/* <div className="flex">
+            <BsFillTabletFill className="w-full h-12 text-[#0098FD]" />
+            <div className="">
+              <p className="text-6xl flex">
+                One <span className="text-[#0098FD] font-bold">Tab</span>
+              </p>
+              <p>
+                One <span>Teacher</span>
+              </p>
+            </div>
+          </div> */}
         </Link>
 
         {/* DESKTOP NAVIGATION */}
