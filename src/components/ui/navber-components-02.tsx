@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { navLinks } from "./Navinks";
 import { motion, AnimatePresence } from "framer-motion";
 import notearch from "../../assets/OneTab12.svg";
+import Logo from "./logo";
 // import { OneTabLogo } from "./logo";
 // import { BsFillTabletFill } from "react-icons/bs";
 
@@ -35,8 +36,9 @@ const Navbar = () => {
             whileHover={{ rotate: 10, scale: 1.1 }} // লোগো হোভার অ্যানিমেশন
             className=""
           ></motion.div>
+          <Logo/>
 
-          <img className="w-40 object-cover -top-2 relative h-17" src={notearch} alt="" />
+          {/* <img className="w-40 object-cover -top-2 relative h-17" src={notearch} alt="" /> */}
           {/* <OneTabLogo/> */}
           {/* <div className="flex">
             <BsFillTabletFill className="w-full h-12 text-[#0098FD]" />
